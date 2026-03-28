@@ -18,12 +18,17 @@ git clone https://github.com/xstread/ccowsay.git
 cd ccowsay
 ```
 
-### 3. Use the install script for compiling and installing the ccowsay app:
+### 3. Build and install:
 
 ```bash
-chmod +x ./install.sh
+make
+sudo make install
+```
 
-./install.sh
+To uninstall:
+
+```bash
+sudo make uninstall
 ```
 
 ## Usage
