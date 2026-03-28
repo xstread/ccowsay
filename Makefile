@@ -14,11 +14,13 @@ $(TARGET): $(SOURCE)
 install: $(TARGET)
 	install -d $(BINDIR)
 	install -m 755 $(TARGET) $(BINDIR)
+	ln -sf $(TARGET) $(BINDIR)/ccowthink
 	install -d $(SHAREDIR)/cows
 	cp -r cows/* $(SHAREDIR)/cows
 
 uninstall:
 	rm -f $(BINDIR)/$(TARGET)
+	rm -f $(BINDIR)/ccowthink
 	rm -rf $(SHAREDIR)
 
 clean:
